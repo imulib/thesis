@@ -33,3 +33,17 @@ zh-CN:
   layouts:
     application: 
       thesis: "博硕毕业论文"
+      subject: "专业"
+      year: "年度"
+      help: "帮助"
+  activerecord:
+    models:
+      admin_user: "管理员"
+    attributes:
+      admin_user:
+        email: "电子邮箱"
+        created_at: "创建于"
+        updated_at: "更新于"
+        reset_password_token: "密码重置密钥"
+        reset_password_sent_at: "重置密码发送至"
+        remember_created_at: "记住密码始于"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_023540) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_01_082900) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -37,4 +37,36 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_023540) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "title"
+    t.string "creator"
+    t.string "department"
+    t.integer "teacher_id", null: false
+    t.string "language"
+    t.datetime "date_submitted"
+    t.datetime "date_replied"
+    t.string "format_extent_mime"
+    t.integer "format_extent_page"
+    t.string "type"
+    t.string "rights_location"
+    t.string "rights_security_classification"
+    t.string "rights_access_rights"
+    t.string "degree_category"
+    t.string "degree_grantor"
+    t.string "degree_descipline"
+    t.string "degree_level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_id"], name: "index_items_on_teacher_id"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "name"
+    t.string "institution"
+    t.text "intro"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "items", "teachers"
 end

@@ -39,6 +39,8 @@ zh-CN:
   activerecord:
     models:
       admin_user: "管理员"
+      teacher: "指导教师"
+      item: "毕业论文"
     attributes:
       admin_user:
         email: "电子邮箱"
@@ -47,3 +49,26 @@ zh-CN:
         reset_password_token: "密码重置密钥"
         reset_password_sent_at: "重置密码发送至"
         remember_created_at: "记住密码始于"
+      teacher:
+        name: "姓名"
+        institution: "单位"
+        intro: "简介"
+      item:
+        title: "题目"
+        creator: "作者"
+        department: "院系"
+        teatcher_id: "指导教师"
+        language: "正文语种"
+        date_submitted: "提交日期"
+        date_replied: "答辩日期"
+        format_extent_mime: "文献类型"
+        format_extent_page: "页数"
+        type: "文献类型"
+        rights_location: "文献馆藏地"
+        rights_security_classification: "论文保密级别"
+        rights_access_rights: "访问范围"
+        degree_category: "学位种类"
+        degree_grantor: "授予单位"
+        degree_descipline: "专业"
+        degree_level: "研究生层次"
+
